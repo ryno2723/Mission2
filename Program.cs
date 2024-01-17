@@ -9,16 +9,16 @@ internal class Program
         int rollNum = 0;
 
         System.Console.WriteLine("Welcome to the dice throwing simulator!");
-        System.Console.WriteLine("How many dice rolls would you like to simulate?");
+        System.Console.Write("\nHow many dice rolls would you like to simulate? ");
         string userInput = System.Console.ReadLine();
 
         int.TryParse(userInput, out rollNum);
 
         int[] results = rd.RollSim(rollNum);
 
-        System.Console.WriteLine("DICE ROLLING SIMULATION RESULTS");
+        System.Console.WriteLine("\nDICE ROLLING SIMULATION RESULTS");
         System.Console.WriteLine("Each \"*\" represents 1% of the total number of rolls.");
-        System.Console.WriteLine("Total number of rolls = " + rollNum);
+        System.Console.WriteLine("Total number of rolls = " + rollNum + ".\n");
 
         for (int i = 0; i < results.Length; i++) 
         {
@@ -32,6 +32,6 @@ internal class Program
             System.Console.WriteLine();
         }
 
-        System.Console.WriteLine("Thank you for using the dice throwing simulator. Goodbye!");
+        System.Console.WriteLine("\nThank you for using the dice throwing simulator. Goodbye!");
     }
 }
