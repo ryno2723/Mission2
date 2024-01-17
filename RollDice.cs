@@ -5,15 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Mission2
-{
+{//Create RollDice Class
     public class RollDice
     {
         private Random random;
 
         public RollDice()
-        {
+        {//Create Random variable
             random = new Random();
         }
+        //Create RollSim method that simulates dice roll and adds count of results to an array
         public int[] RollSim(int n)
         {
             int[] results = new int[11];
@@ -27,7 +28,7 @@ namespace Mission2
 
                 results[sum - 2]++;
             }
-
+            //return the results that will be used in Program class
             return results;
 
         }
